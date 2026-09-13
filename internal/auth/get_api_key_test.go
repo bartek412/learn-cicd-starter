@@ -32,7 +32,7 @@ func TestGetAPIKey(t *testing.T) {
 			if err != tt.expectedErr {
 				t.Fatalf("failed error, error = %s expectedErr= %s", err, tt.expectedErr)
 			}
-			if gotKey == tt.expectedKey {
+			if gotKey != tt.expectedKey {
 				t.Fatalf("failed wrong key, key = %s, expectedKey = %s", gotKey, tt.expectedKey)
 			}
 		})
